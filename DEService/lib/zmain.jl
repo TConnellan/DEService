@@ -1,3 +1,5 @@
+# adapted from https://github.com/TConnellan/Discrete-Event-Simulator-of-Queuing-System
+
 module DESMain
 
 using DEService.DESParameters, DEService.DESSystem, DEService.DESState
