@@ -8,7 +8,7 @@ using DataStructures
 using Plots
 using DEService.DESEvents, DEService.DESParameters, DEService.DESState, DEService.DESRoutingFunctions
 
-export simulate, run_sim
+export simulate, run_sim, record_data, create_init_state, create_init_event
 
 """
 The main simulation function gets an initial state, parameters and event. 
