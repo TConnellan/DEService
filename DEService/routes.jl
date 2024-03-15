@@ -24,7 +24,7 @@ route("/compute") do
   maxTime = parse(Float64, getpayload(:timethreshold, 100))
   result = simulate(params, initState, initEvent, max_time = maxTime, callback = record_data)
   if stateType == DESState.TrackTotals
-    return Genie.Renderer.Json.json(Dict("averageJobs" => result[1][1], "transitProportion" => result[1][2]))
+    return Genie.Renderer.Json.json(Dict("averageJobs" => result[1], "transitProportion" => result[2]))
   end
   if stateType == DESState.TrackAllJobs
     return Genie.Renderer.Json.json(Dict("sojournTimes" => result))
