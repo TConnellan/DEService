@@ -21,8 +21,8 @@ USER genie
 
 # instantiate Julia packages
 # RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile(); "
-RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); "
-RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.precompile(); "
+RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.add(\"LinearAlgebra\"); Pkg.add(\"Distributions\"); Pkg.add(\"StatsBase\"); Pkg.add(\"Parameters\");  Pkg.add(\"DataStructures\"); Pkg.add(\"Plots\");  "
+RUN julia -e "using Pkg; Pkg.activate(\".\"); Pkg.instantiate(); Pkg.precompile(); "
 
 # ports
 EXPOSE 8000
