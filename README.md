@@ -4,5 +4,5 @@
 - Deploy the simulator as a scalable service on the cloud
 
 #### ToDo
-- Logic in "Main" module should be part of endpoints
-- Standardise what endpoints expect to recieve and return
+- Separate different simulation types into different routes
+- Deploy in cloud
